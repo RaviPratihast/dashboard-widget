@@ -5,7 +5,7 @@
   align-items: center;
   padding: 10px;
   padding-inline: 50px;
-  border-bottom: 1px solid #ccc;
+  /* border-bottom: 1px solid #ccc; */
 }
 
 /* Left section of the navbar */
@@ -16,7 +16,8 @@
 /* Home link */
 .navbar-home {
   text-decoration: none;
-  font-size: 18px;
+  font-size: 16px;
+  color: #9ca3af;
 }
 
 /* Right section of the navbar */
@@ -38,7 +39,9 @@
   padding: 5px 10px 5px 35px; /* Adjust padding for icon space */
   font-size: 16px;
   width: 100%;
-  border: 1px solid #ccc;
+  border: 2px solid #e0f2fe;
+  color: black;
+  background: #f0f9ff;
   border-radius: 4px;
   outline: none;
 }
@@ -50,5 +53,6 @@
   top: 50%;
   transform: translateY(-50%);
   font-size: 18px;
-  color: #aaa;
+  /* font-weight: 500; */
+  color: #b3cfe1;
 }

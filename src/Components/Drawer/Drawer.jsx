@@ -10,7 +10,21 @@ const Drawer = ({ isOpen, onClose }) => {
             ×
           </button>
         </nav>
-        <div className="drawer-content">{/* Content goes here */}</div>
+        <div className="drawer-content">
+          <p>Personalize your dashboard by adding the following widget</p>
+          <div className="drawer-navigation">
+            <ul>
+              <li className="active">CSPM</li>
+              <li>CWPP</li>
+              <li>Image</li>
+              <li>Ticket</li>
+            </ul>
+          </div>
+          <div className="checkbox-container">
+            <input type="checkbox" id="option1" className="custom-checkbox" />
+            <label>Cloud Accounts</label>
+          </div>
+        </div>
         <div className="drawer-footer">
           <button className="drawer-cancel-button" onClick={onClose}>
             Cancel

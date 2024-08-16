@@ -5,8 +5,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   padding-inline: 50px;
+  /* border: 1px solid green; */
+  background: #e0ebff;
 }
 
 /* Styling for the CNAPP Dashboard title */
@@ -37,9 +39,9 @@
   white-space: nowrap; /* Prevent text wrapping */
 }
 
-.dashboard-button:hover {
+/* .dashboard-button:hover {
   background-color: #f0f0f0;
-}
+} */
 
 /* Specific styling for the Add Widget button */
 .add-widget-button {
@@ -51,6 +53,7 @@
   background-color: transparent;
   /* border: none; */
   border: 1px solid #ddd;
+  background-color: #f9f9f9;
   cursor: pointer;
   font-size: 14px;
   padding: 0 10px; /* Consistent padding for icons */
@@ -62,68 +65,25 @@
 .dashboard-date-button {
   display: flex;
   align-items: center;
-  padding: 0 15px;
+  gap: 2px;
+  padding: 0 5px;
   background-color: #f9f9f9;
-  border: 1px solid #0073e6;
+  border: 1px solid #13147c;
   border-radius: 5px;
-  color: #0073e6;
+  color: #13147c;
   cursor: pointer;
   font-size: 14px;
+  font-weight: bold;
   height: 40px; /* Same height as other buttons */
 }
+.clock-icon {
+  /* border-right: 1px solid black; */
+}
+.drop-down-icon {
+  font-weight: bold;
+  font-size: 18px;
+}
 
-.dashboard-date-button:hover {
+/* .dashboard-date-button:hover {
   background-color: #e6f3ff;
-}
-
-/* Container for all categories */
-.categories-container {
-  padding: 20px;
-}
-
-/* Container for the first category */
-.category-container-1 {
-  margin-bottom: 20px;
-  /* border: 1px solid rgb(83, 177, 99); */
-  padding: 20px;
-}
-
-/* Heading style */
-.category-container-1 h3 {
-  font-size: 20px;
-  margin-bottom: 20px;
-  text-align: start;
-  /* border: 1px solid red; */
-}
-
-/* Flexbox container to arrange widgets horizontally */
-.widgets-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px; /* Space between the widgets */
-}
-
-/* Widget styling */
-.widget {
-  flex: 1; /* Allows each widget to take up equal space */
-  height: 240px; /* Set height for the widget */
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background-color: #f9f9f9;
-  display: flex;
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
-}
-
-/* Button styling */
-.add-widget-button {
-  font-size: 14px;
-  padding: 10px 20px;
-  /* background-color: #0073e6; */
-  color: #3f3f46;
-  /* border: none; */
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-
+} */

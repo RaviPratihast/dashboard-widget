@@ -33,11 +33,14 @@ const Dashboard = () => {
               <PiDotsThreeVerticalBold />
             </button>
             <button className="dashboard-date-button">
-              <GoClockFill /> | Last 2 days <RiArrowDropDownLine />
+              <GoClockFill className="clock-icon" />
+              <span>Last 2 days</span>{" "}
+              <RiArrowDropDownLine className="drop-down-icon" />
             </button>
           </div>
         </div>
         <div className="categories-container">
+          <Categories />
           <Categories />
         </div>
         <Drawer isOpen={isDrawerOpen} onClose={toggleDrawer} />
