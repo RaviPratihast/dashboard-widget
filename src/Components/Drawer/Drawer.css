@@ -1,0 +1,89 @@
+/* Backdrop for blurring the background */
+.drawer-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+.drawer-backdrop.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Drawer styling */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 700px;
+  background-color: #fff;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.drawer-backdrop.open .drawer {
+  transform: translateX(0);
+}
+
+/* Navigation bar */
+.drawer-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #13147c;
+  color: white;
+}
+
+.drawer-nav h3 {
+  margin: 0;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Footer with buttons */
+.drawer-footer {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.drawer-cancel-button,
+.drawer-confirm-button {
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  /* border: none; */
+  cursor: pointer;
+}
+
+.drawer-cancel-button {
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.drawer-confirm-button {
+  color: white;
+  background-color: black;
+}
