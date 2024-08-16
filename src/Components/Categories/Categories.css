@@ -1,0 +1,23 @@
+/* Container for all categories */
+.categories-container {
+    padding: 20px;
+    background: #e0ebff;
+  }
+  
+  /* Container for the first category */
+  .category-container-1 {
+    margin-bottom: 20px;
+    /* border: 1px solid rgb(83, 177, 99); */
+    padding: 20px;
+
+  }
+  
+  /* Heading style */
+  .category-container-1 h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: start;
+    /* border: 1px solid red; */
+  }
+  
+  
