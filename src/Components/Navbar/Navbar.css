@@ -1,0 +1,54 @@
+/* Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  padding-inline: 50px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Left section of the navbar */
+.navbar-left {
+  flex: 1;
+}
+
+/* Home link */
+.navbar-home {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Right section of the navbar */
+.navbar-right {
+  flex: 2;
+  text-align: center;
+}
+
+/* Container for search input and icon */
+.navbar-search-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Search input */
+.navbar-search {
+  padding: 5px 10px 5px 35px; /* Adjust padding for icon space */
+  font-size: 16px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+/* Magnifying glass icon inside the search input */
+.navbar-search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #aaa;
+}
