@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useWidget } from "../../Context/WidgetsContext";
 import Navbar from "../../Components/Navbar/Navbar";
 import { IoMdAdd } from "react-icons/io";
 import { LuRefreshCw } from "react-icons/lu";
@@ -10,6 +11,7 @@ import Drawer from "../../Components/Drawer/Drawer";
 import "./Dashboard.css";
 
 const Dashboard = () => {
+  const { state, dispatch } = useWidget();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const toggleDrawer = () => {
@@ -40,10 +42,20 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="categories-container">
-          <Categories />
-          <Categories />
+          {state.map((category) => (
+            <Categories
+              key={category.id}
+              category={category}
+              toggleDrawer={toggleDrawer}
+            />
+          ))}
         </div>
-        <Drawer isOpen={isDrawerOpen} onClose={toggleDrawer} />
+
+        <Drawer
+          isOpen={isDrawerOpen}
+          onClose={toggleDrawer}
+          toggleDrawer={toggleDrawer}
+        />
       </div>
     </>
   );

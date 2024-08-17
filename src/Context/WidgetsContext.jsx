@@ -1,6 +1,6 @@
 import { createContext, useContext, useReducer } from "react";
 import WidgetsReducer from "../Reducer/WidgetReducer";
-import initialData from "../data/data.json"; // Import JSON data
+import initialData from "../Data.json";
 
 // Define the initial state from JSON data
 const initialState = initialData.categories;
