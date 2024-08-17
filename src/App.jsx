@@ -1,9 +1,12 @@
 import Dashboard from "./Page/Dashboard/Dashboard";
+import { WidgetsProvider } from "./Context/WidgetsContext";
 
 const App = () => {
   return (
     <div>
-      <Dashboard />
+      <WidgetsProvider>
+        <Dashboard />
+      </WidgetsProvider>
     </div>
   );
 };
