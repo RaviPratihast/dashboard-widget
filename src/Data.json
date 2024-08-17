@@ -1,0 +1,15 @@
+{
+  "categories": [
+    {
+      "id": "1",
+      "name": "CSPM Executive Dashboard",
+      "widgets": [
+        {
+          "id": "1",
+          "name": "Widget 1",
+          "text": "This is widget 1"
+        }
+      ]
+    }
+  ]
+}
