@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useWidget } from "../../Context/WidgetsContext";
 import Navbar from "../../Components/Navbar/Navbar";
 import { IoMdAdd } from "react-icons/io";
@@ -13,16 +13,35 @@ import "./Dashboard.css";
 const Dashboard = () => {
   const { state } = useWidget();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [selectedCategoryId, setSelectedCategoryId] = useState(null); // State to track the selected category ID
+  const [selectedCategoryId, setSelectedCategoryId] = useState(null);
+  const [searchTerm, setSearchTerm] = useState(""); // State for search input
 
   const toggleDrawer = (categoryId = null) => {
-    setSelectedCategoryId(categoryId); // Set the selected category ID when opening the drawer
+    setSelectedCategoryId(categoryId);
     setIsDrawerOpen(!isDrawerOpen);
   };
 
+  // Filter categories and widgets based on the search term
+  const filteredCategories = useMemo(() => {
+    if (!searchTerm) return state; // Return all if no search term
+
+    return state
+      .map((category) => {
+        const matchingWidgets = category.widgets.filter((widget) =>
+          widget.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+
+        return {
+          ...category,
+          widgets: matchingWidgets.length > 0 ? [matchingWidgets[0]] : [], // Show only one widget per category
+        };
+      })
+      .filter((category) => category.widgets.length > 0); // Exclude categories with no matching widgets
+  }, [searchTerm, state]);
+
   return (
     <>
-      <Navbar />
+      <Navbar setSearchTerm={setSearchTerm} />
       <div className="dashboard">
         <div className="dashboard-container">
           <h2 className="dashboard-title">CNAPP Dashboard</h2>
@@ -47,12 +66,12 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="categories-container">
-          {state.map((category) => (
+          {filteredCategories.map((category) => (
             <Categories
               key={category.id}
               category={category}
               categoryId={category.id}
-              toggleDrawer={() => toggleDrawer(category.id)} // Pass the category ID when opening the drawer
+              toggleDrawer={() => toggleDrawer(category.id)}
             />
           ))}
         </div>
@@ -60,7 +79,7 @@ const Dashboard = () => {
         <Drawer
           isOpen={isDrawerOpen}
           onClose={() => toggleDrawer()}
-          categoryId={selectedCategoryId} // Pass the selected category ID to the drawer
+          categoryId={selectedCategoryId}
         />
       </div>
     </>

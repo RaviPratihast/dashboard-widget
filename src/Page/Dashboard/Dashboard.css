@@ -1,6 +1,6 @@
 /* General layout for the dashboard */
 .dashboard{
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 100vh;
 }
 .dashboard-container {
@@ -10,7 +10,7 @@
   padding: 20px;
   /* margin-top: 20px; */
   padding-inline: 50px;
-  border: 1px solid green;
+  /* border: 1px solid green; */
   background: #e0ebff;
 }
 

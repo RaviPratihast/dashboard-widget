@@ -1,7 +1,11 @@
-import "./Navbar.css";
 import { HiOutlineMagnifyingGlass } from "react-icons/hi2";
+import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ setSearchTerm }) => {
+  const handleSearchChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-left">
@@ -16,6 +20,7 @@ const Navbar = () => {
             type="text"
             placeholder="Search anything..."
             className="navbar-search"
+            onChange={handleSearchChange}
           />
         </div>
       </div>
