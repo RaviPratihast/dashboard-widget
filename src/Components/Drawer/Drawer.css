@@ -56,13 +56,15 @@
 }
 /* checkbox */
 .checkbox-container {
+  border: 1px solid black;
+  margin-top: 10px;
+}
+.checkbox {
   display: flex;
   align-items: center;
   margin: 20px 20px;
-  /* padding-left: 10px; */
   padding: 5px 10px;
- 
-  border: 1px solid black;
+  border: 1px solid lightgrey;
   border-radius: 5px;
 }
 
@@ -72,7 +74,11 @@
 
 label {
   font-size: 16px;
-  color: #333; /* Text color */
+  color: #333; /* Text color*/
+}
+/* widget creator container */
+.widget-create-container {
+  border: 1px solid green;
 }
 
 /* backdrop */
