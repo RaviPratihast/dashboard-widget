@@ -1,4 +1,4 @@
-import { IoMdAdd } from "react-icons/io";
+import { IoMdAdd, IoMdClose } from "react-icons/io";
 import { useWidget } from "../../Context/WidgetsContext";
 import "./Widget.css";
 
@@ -9,8 +9,7 @@ const Widget = ({ widget, toggleDrawer, categoryId }) => {
     <div className="widget widget-1">
       {widget.name ? (
         <div className="widget-content">
-          <h4>{widget.name}</h4>
-          <p>{widget.text}</p> {/* Display widget text */}
+          {/* Remove button in the top right corner */}
           <button
             className="remove-widget-button"
             onClick={() => {
@@ -23,8 +22,10 @@ const Widget = ({ widget, toggleDrawer, categoryId }) => {
               });
             }}
           >
-            Remove Widget
+            <IoMdClose />
           </button>
+          <h4>{widget.name}</h4>
+          <p>{widget.text}</p> {/* Display widget text */}
         </div>
       ) : (
         <button className="add-widget-button" onClick={toggleDrawer}>

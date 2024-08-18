@@ -1,29 +1,53 @@
 /* Flexbox container to arrange widgets horizontally */
 .widgets-container {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px; /* Space between the widgets */
-  }
-  
-  /* Widget styling */
-  .widget {
-    flex: 1; /* Allows each widget to take up equal space */
-    height: 240px; /* Set height for the widget */
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    background-color: #f9f9f9;
-    display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-  }
-  
-  /* Button styling */
-  .add-widget-button {
-    font-size: 14px;
-    padding: 10px 20px;
-    /* background-color: #0073e6; */
-    color: #3f3f46;
-    /* border: none; */
-    border-radius: 5px;
-    cursor: pointer;
-  }
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Space between the widgets */
+  position: relative;
+}
+
+.remove-widget-button {
+  position: absolute; /* Position the button absolutely */
+  top: 5px; /* Distance from the top */
+  right: 5px; /* Distance from the right */
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  padding: 5px; /* Add padding */
+  cursor: pointer; /* Show pointer cursor */
+  display: flex; /* Center the icon */
+  align-items: center; /* Center the icon */
+  justify-content: center; /* Center the icon */
+  font-size: 20px; /* Increase the size of the icon */
+}
+
+.remove-widget-button:hover {
+  color: #ff0000; /* Optional: Change color on hover */
+}
+
+.widget-1 {
+  position: relative; /* Ensure the widget has relative positioning */
+  /* Add other styles as needed */
+}
+
+/* Widget styling */
+.widget {
+  flex: 1; /* Allows each widget to take up equal space */
+  height: 240px; /* Set height for the widget */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+/* Button styling */
+.add-widget-button {
+  font-size: 14px;
+  padding: 10px 20px;
+  /* background-color: #0073e6; */
+  color: #3f3f46;
+  /* border: none; */
+  border-radius: 5px;
+  cursor: pointer;
+}
