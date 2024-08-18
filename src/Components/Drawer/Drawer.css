@@ -77,8 +77,44 @@ label {
   color: #333; /* Text color*/
 }
 /* widget creator container */
-.widget-create-container {
+/* .widget-create-container {
   border: 1px solid green;
+} */
+
+/* Drawer.css */
+
+.widget-create-container,
+.input-group {
+  margin-bottom: 20px; /* Add space between elements */
+  padding: 15px; /* Add padding inside the container */
+  border-radius: 8px; /* Round the corners */
+  background-color: #f9f9f9; /* Light background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+.widget-create-container label,
+.input-group label {
+  display: block; /* Ensure the label is on its own line */
+  font-size: 16px; /* Set font size for labels */
+  color: #333; /* Dark color for label text */
+  margin-bottom: 8px; /* Space below the label */
+}
+
+.widget-create-container input,
+.input-group input {
+  width: 100%; /* Make the input field take up the full width */
+  padding: 10px; /* Add padding inside the input field */
+  font-size: 14px; /* Set font size for the input text */
+  border: 1px solid #ddd; /* Light border around the input field */
+  border-radius: 4px; /* Round the corners of the input field */
+  box-sizing: border-box; /* Include padding and border in the width */
+}
+
+.widget-create-container input:focus,
+.input-group input:focus {
+  border-color: #007bff; /* Change border color on focus */
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Add focus shadow */
 }
 
 /* backdrop */
