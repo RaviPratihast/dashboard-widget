@@ -2,23 +2,49 @@
   "categories": [
     {
       "id": "1",
-      "name": "CSPM I will get JOB Dashboard",
+      "name": "CSPM Dashboard",
       "widgets": [
         {
           "id": "1",
           "name": "Widget 1",
           "text": "This is widget 1"
+        },
+        {
+          "id": "2",
+          "name": "Widget 2",
+          "text": "This is widget 2"
         }
       ]
     },
     {
       "id": "2",
-      "name": "dknkdnfkdn",
+      "name": "CWPP Dashboard",
       "widgets": [
         {
+          "id": "1",
+          "name": "Widget A",
+          "text": "This is widget A"
+        },
+        {
           "id": "2",
-          "name": "Widget 2",
-          "text": "This is widget 2"
+          "name": "Widget B",
+          "text": "This is widget B"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Image Dashboard",
+      "widgets": [
+        {
+          "id": "1",
+          "name": "Widget X",
+          "text": "This is widget X"
+        },
+        {
+          "id": "2",
+          "name": "Widget Y",
+          "text": "This is widget Y"
         }
       ]
     }

@@ -11,10 +11,12 @@ import Drawer from "../../Components/Drawer/Drawer";
 import "./Dashboard.css";
 
 const Dashboard = () => {
-  const { state, dispatch } = useWidget();
+  const { state } = useWidget();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [selectedCategoryId, setSelectedCategoryId] = useState(null); // State to track the selected category ID
 
-  const toggleDrawer = () => {
+  const toggleDrawer = (categoryId = null) => {
+    setSelectedCategoryId(categoryId); // Set the selected category ID when opening the drawer
     setIsDrawerOpen(!isDrawerOpen);
   };
 
@@ -25,7 +27,10 @@ const Dashboard = () => {
         <div className="dashboard-container">
           <h2 className="dashboard-title">CNAPP Dashboard</h2>
           <div className="dashboard-buttons">
-            <button className="add-widget-button" onClick={toggleDrawer}>
+            <button
+              className="add-widget-button"
+              onClick={() => toggleDrawer()}
+            >
               Add Widget <IoMdAdd />
             </button>
             <button className="dashboard-icon-button">
@@ -46,15 +51,16 @@ const Dashboard = () => {
             <Categories
               key={category.id}
               category={category}
-              toggleDrawer={toggleDrawer}
+              categoryId={category.id}
+              toggleDrawer={() => toggleDrawer(category.id)} // Pass the category ID when opening the drawer
             />
           ))}
         </div>
 
         <Drawer
           isOpen={isDrawerOpen}
-          onClose={toggleDrawer}
-          toggleDrawer={toggleDrawer}
+          onClose={() => toggleDrawer()}
+          categoryId={selectedCategoryId} // Pass the selected category ID to the drawer
         />
       </div>
     </>
