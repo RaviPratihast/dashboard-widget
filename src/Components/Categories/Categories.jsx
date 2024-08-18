@@ -1,7 +1,7 @@
 import Widget from "../Widget/Widget";
 import "./Categories.css";
 
-const Categories = ({ category, toggleDrawer }) => {
+const Categories = ({ category, toggleDrawer, categoryId }) => {
   // Copy the widgets array from the category
   const widgets = [...category.widgets];
 
@@ -19,7 +19,12 @@ const Categories = ({ category, toggleDrawer }) => {
       <h3>{category.name}</h3>
       <div className="widgets-container">
         {widgets.map((widget) => (
-          <Widget key={widget.id} widget={widget} toggleDrawer={toggleDrawer} />
+          <Widget
+            key={widget.id}
+            categoryId={categoryId}
+            widget={widget}
+            toggleDrawer={toggleDrawer}
+          />
         ))}
       </div>
     </div>
