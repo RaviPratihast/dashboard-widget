@@ -2,12 +2,11 @@ import { IoMdAdd } from "react-icons/io";
 import { useWidget } from "../../Context/WidgetsContext";
 import "./Widget.css";
 
-const Widget = ({ widget, toggleDrawer }) => {
+const Widget = ({ widget, toggleDrawer, categoryId }) => {
   const { dispatch } = useWidget();
 
   return (
     <div className="widget widget-1">
-      {console.log(widget.name ? "True" : "false")}
       {widget.name ? (
         <div className="widget-content">
           <h4>{widget.name}</h4>
@@ -15,7 +14,13 @@ const Widget = ({ widget, toggleDrawer }) => {
           <button
             className="remove-widget-button"
             onClick={() => {
-              dispatch({ type: "REMOVE_WIDGET", id: widget.id });
+              dispatch({
+                type: "REMOVE_WIDGET",
+                payload: {
+                  categoryId, // Pass the categoryId
+                  widgetId: widget.id, // Pass the widgetId
+                },
+              });
             }}
           >
             Remove Widget
