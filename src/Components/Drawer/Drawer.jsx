@@ -9,7 +9,7 @@ const Drawer = ({ isOpen, onClose }) => {
   const [selectedCategoryId, setSelectedCategoryId] = useState(null);
 
   useEffect(() => {
-    // Automatically select the first category when the drawer opens
+
     if (isOpen && state.length > 0) {
       setSelectedCategoryId(state[0].id);
     }
@@ -26,10 +26,10 @@ const Drawer = ({ isOpen, onClose }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Check if the name and text fields are not empty
+   
     if (!formData.name.trim() || !formData.text.trim()) {
       alert("Please fill in name and text fields.");
-      return; // Stop the function from proceeding if fields are empty
+      return; 
     }
 
     const newWidget = {

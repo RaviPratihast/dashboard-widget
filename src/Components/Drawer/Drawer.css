@@ -67,7 +67,7 @@ label {
 }
 .input-group {
   display: flex;
-  flex-direction: column; /* Change to 'row' if you want them side by side */
+  flex-direction: column;
   gap: 15px;
   margin-bottom: 20px;
   margin: 30px;
@@ -78,7 +78,7 @@ label {
 }
 
 .input-item {
-  flex: 1; /* Allows the inputs to grow evenly in a row layout */
+  flex: 1; 
   display: flex;
   flex-direction: column;
 }
