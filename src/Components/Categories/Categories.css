@@ -1,19 +1,18 @@
 .categories-container {
-    padding: 20px;
-    background: #e0ebff;
-  }
-  
-  .category-container-1 {
-    margin-bottom: 20px;
-    padding: 20px;
+  padding: 20px;
+  background: #e0ebff;
+}
 
-  }
-  
-  .category-container-1 h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
-    text-align: start;
-    
-  }
-  
-  
+.category-container {
+  margin-bottom: 10px;
+ padding-inline: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.category-container-1 h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  text-align: start;
+}
