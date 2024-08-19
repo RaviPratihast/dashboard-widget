@@ -14,7 +14,7 @@ const Categories = ({ category, toggleDrawer, categoryId }) => {
   }
 
   return (
-    <div className={`category-container-${category.id}`}>
+    <div className={`category-container`}>
       <h3>{category.name}</h3>
       <div className="widgets-container">
         {widgets.map((widget) => (
