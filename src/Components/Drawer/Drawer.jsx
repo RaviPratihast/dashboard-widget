@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useWidget } from "../../Context/WidgetsContext";
-import { v4 as uuidv4 } from "uuid"; 
+import { v4 as uuidv4 } from "uuid";
 import "./Drawer.css";
 
 const Drawer = ({ isOpen, onClose }) => {
@@ -101,27 +101,28 @@ const Drawer = ({ isOpen, onClose }) => {
           )}
         </div>
 
-        <div className="widget-create-container">
-          <label htmlFor="name">Widget Name</label>
-          <input
-            type="text"
-            id="name"
-            value={formData.name}
-            name="name"
-            onChange={handleInputChange}
-            placeholder="Enter widget name"
-          />
-        </div>
         <div className="input-group">
-          <label htmlFor="text">Widget Text</label>
-          <input
-            type="text"
-            id="text"
-            value={formData.text}
-            name="text"
-            onChange={handleInputChange}
-            placeholder="Enter widget text"
-          />
+          <h2>Create Widget</h2>
+          <div className="input-item">
+            <input
+              type="text"
+              id="name"
+              value={formData.name}
+              name="name"
+              onChange={handleInputChange}
+              placeholder="Enter widget name"
+            />
+          </div>
+          <div className="input-item">
+            <input
+              type="text"
+              id="text"
+              value={formData.text}
+              name="text"
+              onChange={handleInputChange}
+              placeholder="Enter widget text"
+            />
+          </div>
         </div>
         <div className="drawer-footer">
           <button className="drawer-cancel-button" onClick={onClose}>

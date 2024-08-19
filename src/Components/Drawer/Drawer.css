@@ -51,7 +51,6 @@
   background-color: darkblue;
 }
 .checkbox-container {
-  border: 1px solid black;
   margin-top: 10px;
 }
 .checkbox {
@@ -62,45 +61,46 @@
   border: 1px solid lightgrey;
   border-radius: 5px;
 }
-.custom-checkbox {
-  margin-right: 10px; 
-}
 label {
   font-size: 16px;
-  color: #333; 
+  color: #333;
 }
-.widget-create-container,
 .input-group {
-  margin-bottom: 20px; 
-  padding: 15px; 
-  border-radius: 8px; 
-  background-color: #f9f9f9; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  flex-direction: column; /* Change to 'row' if you want them side by side */
+  gap: 15px;
+  margin-bottom: 20px;
+  margin: 30px;
+  padding:15px;
+  border-radius: 8px;
+  background-color: #e0ebff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.widget-create-container label,
-.input-group label {
-  display: block; 
-  font-size: 16px; 
-  color: #333; 
-  margin-bottom: 8px; 
+.input-item {
+  flex: 1; /* Allows the inputs to grow evenly in a row layout */
+  display: flex;
+  flex-direction: column;
 }
 
-.widget-create-container input,
-.input-group input {
-  width: 100%;
-  padding: 10px; 
+.input-item label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.input-item input {
+  padding: 10px;
   font-size: 14px;
-  border: 1px solid #ddd; 
-  border-radius: 4px; 
-  box-sizing: border-box; 
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
-.widget-create-container input:focus,
-.input-group input:focus {
-  border-color: #007bff; 
-  outline: none; 
-  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); 
+.input-item input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
 }
 
 .drawer-backdrop.open {
