@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useWidget } from "../../Context/WidgetsContext";
 import { v4 as uuidv4 } from "uuid";
 import "./Drawer.css";
@@ -7,6 +7,13 @@ const Drawer = ({ isOpen, onClose }) => {
   const { state, dispatch } = useWidget();
   const [formData, setFormData] = useState({ name: "", text: "" });
   const [selectedCategoryId, setSelectedCategoryId] = useState(null);
+
+  useEffect(() => {
+    // Automatically select the first category when the drawer opens
+    if (isOpen && state.length > 0) {
+      setSelectedCategoryId(state[0].id);
+    }
+  }, [isOpen, state]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -18,14 +25,9 @@ const Drawer = ({ isOpen, onClose }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!selectedCategoryId) {
-      alert("Please select a category.");
-      return;
-    }
 
     // Check if the name and text fields are not empty
     if (!formData.name.trim() || !formData.text.trim()) {
-      // Optionally, you can show an alert or some feedback to the user
       alert("Please fill in name and text fields.");
       return; // Stop the function from proceeding if fields are empty
     }
