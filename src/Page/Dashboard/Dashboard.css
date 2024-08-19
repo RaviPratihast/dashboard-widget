@@ -1,6 +1,11 @@
-/* General layout for the dashboard */
-.dashboard{
-  /* border: 1px solid red; */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dashboard {
   height: 100vh;
 }
 .dashboard-container {
@@ -8,63 +13,50 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  /* margin-top: 20px; */
   padding-inline: 50px;
-  /* border: 1px solid green; */
   background: #e0ebff;
 }
 
-/* Styling for the CNAPP Dashboard title */
 .dashboard-title {
   font-size: 24px;
   font-weight: bold;
 }
 
-/* Container for the buttons */
 .dashboard-buttons {
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-/* Base styling for all buttons to ensure same height and font size */
 .add-widget-button {
   display: flex;
   align-items: center;
-  height: 40px; /* Fixed height for all buttons */
-  font-size: 14px; /* Same font size for all buttons */
-  padding: 0 15px; /* Padding for content inside buttons */
+  height: 40px;
+  font-size: 14px;
+  padding: 0 15px;
   background-color: #f9f9f9;
   border: 1px solid #ddd;
   border-radius: 5px;
   cursor: pointer;
   margin-left: 10px;
-  white-space: nowrap; /* Prevent text wrapping */
+  white-space: nowrap;
 }
 
-/* .dashboard-button:hover {
-  background-color: #f0f0f0;
-} */
-
-/* Specific styling for the Add Widget button */
 .add-widget-button {
   flex-shrink: 0;
 }
 
-/* Specific styling for the icon buttons */
 .dashboard-icon-button {
   background-color: transparent;
-  /* border: none; */
   border: 1px solid #ddd;
   background-color: #f9f9f9;
   cursor: pointer;
   font-size: 14px;
-  padding: 0 10px; /* Consistent padding for icons */
-  height: 40px; /* Same height as other buttons */
+  padding: 0 10px;
+  height: 40px;
   border-radius: 5px;
 }
 
-/* Styling for the Last 2 days button */
 .dashboard-date-button {
   display: flex;
   align-items: center;
@@ -77,16 +69,10 @@
   cursor: pointer;
   font-size: 14px;
   font-weight: bold;
-  height: 40px; /* Same height as other buttons */
+  height: 40px;
 }
-.clock-icon {
-  /* border-right: 1px solid black; */
-}
+
 .drop-down-icon {
   font-weight: bold;
   font-size: 18px;
 }
-
-/* .dashboard-date-button:hover {
-  background-color: #e6f3ff;
-} */

@@ -14,16 +14,15 @@ const Dashboard = () => {
   const { state } = useWidget();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [selectedCategoryId, setSelectedCategoryId] = useState(null);
-  const [searchTerm, setSearchTerm] = useState(""); // State for search input
+  const [searchTerm, setSearchTerm] = useState("");
 
   const toggleDrawer = (categoryId = null) => {
     setSelectedCategoryId(categoryId);
     setIsDrawerOpen(!isDrawerOpen);
   };
 
-  // Filter categories and widgets based on the search term
   const filteredCategories = useMemo(() => {
-    if (!searchTerm) return state; // Return all if no search term
+    if (!searchTerm) return state;
 
     return state
       .map((category) => {
@@ -33,10 +32,10 @@ const Dashboard = () => {
 
         return {
           ...category,
-          widgets: matchingWidgets.length > 0 ? [matchingWidgets[0]] : [], // Show only one widget per category
+          widgets: matchingWidgets.length > 0 ? [matchingWidgets[0]] : [],
         };
       })
-      .filter((category) => category.widgets.length > 0); // Exclude categories with no matching widgets
+      .filter((category) => category.widgets.length > 0);
   }, [searchTerm, state]);
 
   return (

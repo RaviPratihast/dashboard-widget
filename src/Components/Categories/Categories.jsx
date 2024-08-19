@@ -2,10 +2,9 @@ import Widget from "../Widget/Widget";
 import "./Categories.css";
 
 const Categories = ({ category, toggleDrawer, categoryId }) => {
-  // Copy the widgets array from the category
+  
   const widgets = [...category.widgets];
 
-  // Add empty widgets until there are 3
   while (widgets.length < 3) {
     widgets.push({
       id: `add-widget-${widgets.length + 1}`,

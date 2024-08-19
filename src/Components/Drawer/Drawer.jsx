@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useWidget } from "../../Context/WidgetsContext";
-import { v4 as uuidv4 } from "uuid"; // Import uuid for generating unique IDs
-import "./Drawer.css"; // Import the CSS file for the drawer
+import { v4 as uuidv4 } from "uuid"; 
+import "./Drawer.css";
 
 const Drawer = ({ isOpen, onClose }) => {
   const { state, dispatch } = useWidget();

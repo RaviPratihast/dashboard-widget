@@ -1,4 +1,3 @@
-/* Backdrop for blurring the background */
 .drawer-backdrop {
   position: fixed;
   top: 0;
@@ -16,16 +15,14 @@
   margin-left: 15px;
   margin-top: 20px;
 }
-/* Drawer navigation styling */
 .drawer-navigation ul {
   display: flex;
   list-style-type: none;
   padding: 0;
   margin: 20px 0 0 15px;
   gap: 20px;
-  position: relative; /* Necessary for positioning the underline */
+  position: relative;
 }
-
 .drawer-navigation ul li {
   color: lightgrey;
   font-weight: 500;
@@ -33,7 +30,6 @@
   position: relative;
   padding-bottom: 5px;
 }
-
 .drawer-navigation ul li::after {
   content: "";
   display: block;
@@ -54,7 +50,6 @@
 .drawer-navigation ul li.active::after {
   background-color: darkblue;
 }
-/* checkbox */
 .checkbox-container {
   border: 1px solid black;
   margin-top: 10px;
@@ -67,63 +62,52 @@
   border: 1px solid lightgrey;
   border-radius: 5px;
 }
-
 .custom-checkbox {
-  margin-right: 10px; /* Spacing between checkbox and label */
+  margin-right: 10px; 
 }
-
 label {
   font-size: 16px;
-  color: #333; /* Text color*/
+  color: #333; 
 }
-/* widget creator container */
-/* .widget-create-container {
-  border: 1px solid green;
-} */
-
-/* Drawer.css */
-
 .widget-create-container,
 .input-group {
-  margin-bottom: 20px; /* Add space between elements */
-  padding: 15px; /* Add padding inside the container */
-  border-radius: 8px; /* Round the corners */
-  background-color: #f9f9f9; /* Light background color */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+  margin-bottom: 20px; 
+  padding: 15px; 
+  border-radius: 8px; 
+  background-color: #f9f9f9; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
 
 .widget-create-container label,
 .input-group label {
-  display: block; /* Ensure the label is on its own line */
-  font-size: 16px; /* Set font size for labels */
-  color: #333; /* Dark color for label text */
-  margin-bottom: 8px; /* Space below the label */
+  display: block; 
+  font-size: 16px; 
+  color: #333; 
+  margin-bottom: 8px; 
 }
 
 .widget-create-container input,
 .input-group input {
-  width: 100%; /* Make the input field take up the full width */
-  padding: 10px; /* Add padding inside the input field */
-  font-size: 14px; /* Set font size for the input text */
-  border: 1px solid #ddd; /* Light border around the input field */
-  border-radius: 4px; /* Round the corners of the input field */
-  box-sizing: border-box; /* Include padding and border in the width */
+  width: 100%;
+  padding: 10px; 
+  font-size: 14px;
+  border: 1px solid #ddd; 
+  border-radius: 4px; 
+  box-sizing: border-box; 
 }
 
 .widget-create-container input:focus,
 .input-group input:focus {
-  border-color: #007bff; /* Change border color on focus */
-  outline: none; /* Remove default focus outline */
-  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); /* Add focus shadow */
+  border-color: #007bff; 
+  outline: none; 
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25); 
 }
 
-/* backdrop */
 .drawer-backdrop.open {
   opacity: 1;
   visibility: visible;
 }
 
-/* Drawer styling */
 .drawer {
   position: fixed;
   top: 0;
@@ -140,7 +124,6 @@ label {
   transform: translateX(0);
 }
 
-/* Navigation bar */
 .drawer-nav {
   display: flex;
   justify-content: space-between;
@@ -165,7 +148,6 @@ label {
   font-weight: 100;
 }
 
-/* Footer with buttons */
 .drawer-footer {
   position: absolute;
   bottom: 20px;
@@ -182,7 +164,6 @@ label {
   border-radius: 5px;
   font-size: 14px;
   outline: none;
-  /* border: none; */
   cursor: pointer;
 }
 
