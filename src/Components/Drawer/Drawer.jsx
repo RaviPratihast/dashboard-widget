@@ -18,6 +18,17 @@ const Drawer = ({ isOpen, onClose }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!selectedCategoryId) {
+      alert("Please select a category.");
+      return;
+    }
+
+    // Check if the name and text fields are not empty
+    if (!formData.name.trim() || !formData.text.trim()) {
+      // Optionally, you can show an alert or some feedback to the user
+      alert("Please fill in name and text fields.");
+      return; // Stop the function from proceeding if fields are empty
+    }
 
     const newWidget = {
       id: uuidv4(),
