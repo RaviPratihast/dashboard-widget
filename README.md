@@ -8,12 +8,11 @@ This project is a dynamic dashboard application where users can manage widgets w
  * Tech Stack
  
  ## Features
- * Dynamic Dashboard Creation: Users can add and remove widgets from categories dynamically.
- * State Management: Efficiently manage the state of widgets using React's useReducer and useContext hooks.
- * Responsive Design: The layout is fully responsive, ensuring compatibility across different devices and screen sizes.
- * Drawer Navigation: A sliding drawer provides easy access to widget management options.
-
- * Search Functionality: Quickly find widgets by searching within the dashboard.
+ * Users can add and remove widgets from categories dynamically.
+ * Efficiently manage the state of widgets using React's useReducer and useContext hooks.
+ * The layout is fully responsive
+ * A sliding drawer provides easy access to widget management options
+ * Find widgets by searching within the dashboard.
 
 
 ## Getting Started
