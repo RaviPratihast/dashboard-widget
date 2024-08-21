@@ -1,6 +1,7 @@
-# Dynamic Dashboard Widget
+# Dynamic Dashboard Widget [Project Link](https://dashboardwidgetui.netlify.app/)
 
 This project is a dynamic dashboard application where users can manage widgets within categories. The dashboard allows users to add, remove, and search for widgets in a user-friendly interface.
+
 
 ## Table of Contents
  * Features
