@@ -11,10 +11,9 @@ const Drawer = ({ isOpen, onClose }) => {
 
   useEffect(() => {
     if (isOpen && isFirstOpen && state.length > 0) {
-      // Set the default category only the first time
       const firstCategoryId = state[0].id;
       setSelectedCategoryId(firstCategoryId);
-      setIsFirstOpen(false); // Ensure this only happens once
+      setIsFirstOpen(false);
     }
   }, [isOpen, state, isFirstOpen]);
 
@@ -33,7 +32,6 @@ const Drawer = ({ isOpen, onClose }) => {
       return;
     }
 
-    // Check if the name and text fields are not empty
     if (!formData.name.trim() || !formData.text.trim()) {
       alert("Please fill in name and text fields.");
       return;
