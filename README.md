@@ -4,13 +4,8 @@ This project is a dynamic dashboard application where users can manage widgets w
 
 ## Table of Contents
  * Features
- * Project Structure
  * Getting Started
- * Installation
- * Usage
  * Tech Stack
- * Contributing
- * License
  
  ## Features
  * Dynamic Dashboard Creation: Users can add and remove widgets from categories dynamically.
